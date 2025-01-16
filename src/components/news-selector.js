@@ -11,9 +11,7 @@ export class NewsSelector extends LitElement {
     }
 
     .filters {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 30px;
+      display: none;
     }
 
     .filter-group {
