@@ -1,4 +1,6 @@
 import { LitElement, html, css } from 'lit';
+import './components/header-nav.js';
+import './components/footer-section.js';
 
 export class NewsPage extends LitElement {
   static styles = css`
@@ -6,23 +8,6 @@ export class NewsPage extends LitElement {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    .header-nav {
-      position: fixed;
-      width: 100%;
-      background-color: #fff;
-      padding: 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 100;
-    }
-
-    .nav-list {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
     }
 
     .news-banner {
@@ -51,28 +36,11 @@ export class NewsPage extends LitElement {
       margin-bottom: 2rem;
     }
 
-    .footer {
-      background-color: #333;
-      color: #fff;
-      padding: 2rem 0;
-      text-align: center;
-    }
   `;
 
   render() {
     return html`
-      <header class="header-nav">
-        <nav class="nav-list">
-          <div class="logo">Logo</div>
-          <ul class="menu">
-            <li>ABOUT US</li>
-            <li>NEWS</li>
-            <li>PRODUCT</li>
-            <li>SOLUTION</li>
-            <li>CONTACT US</li>
-          </ul>
-        </nav>
-      </header>
+      <header-nav></header-nav>
 
       <section class="news-banner">
         <h1 class="banner-title">NEWS</h1>
@@ -88,11 +56,7 @@ export class NewsPage extends LitElement {
         </article>
       </main>
 
-      <footer class="footer">
-        <div class="footer-content">
-          <!-- Add footer information here -->
-        </div>
-      </footer>
+      <footer-section></footer-section>
     `;
   }
 }
