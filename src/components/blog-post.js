@@ -8,7 +8,7 @@ export class BlogPost extends LitElement {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 2rem;
       background: #fff;
       box-sizing: border-box;
     }

@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import './components/header-nav.js';
 import './components/footer-section.js';
+import './components/blog-post.js';
 
 export class NewsPage extends LitElement {
   static styles = css`
@@ -46,15 +47,9 @@ export class NewsPage extends LitElement {
         <h1 class="banner-title">NEWS</h1>
       </section>
 
-      <main class="news-content">
-        <div class="breadcrumb">
-          <span>News</span> > <span>Type</span>
-        </div>
-        <article>
-          <h2>Title</h2>
-          <p>As we know, many businesses now use AI for various tasks, even replacing employees with AI in some cases. Below is a video of the latest fully AI-operated store in Dubai. Thank you Colombo Fasano for sharing this.</p>
-        </article>
-      </main>
+      <div class="news-content">
+        <blog-post></blog-post>
+      </div>
 
       <footer-section></footer-section>
     `;
