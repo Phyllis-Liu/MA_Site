@@ -82,6 +82,16 @@ export class NewsBlock extends LitElement {
     .more-btn:hover {
       background-color: #B32F23;
     }
+
+    .card-more-btn {
+      display: inline-block;
+      padding: 5px 15px;
+      font-size: 0.9em;
+      text-decoration: none;
+      margin: 10px 0 0 auto;
+      float: right;
+      clear: both;
+    }
   `;
 
   static properties = {
@@ -453,6 +463,9 @@ export class NewsBlock extends LitElement {
             <h2 class="card-title">${card.title}</h2>
             <div class="card-content ${card.expanded ? 'expanded' : ''}">
               <p>${card.content}</p>
+              ${card.expanded ? html`
+                <a href="/path/to/your/page/${card.title.replace(/\s+/g, '-').toLowerCase()}" class="more-btn card-more-btn">MORE</a>
+              ` : ''}
             </div>
           </div>
         `)}
