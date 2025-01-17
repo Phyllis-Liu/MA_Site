@@ -109,7 +109,7 @@ export class NewsBlock extends LitElement {
     this.cards = [
       // News Type
       {
-        type: 'News',
+        type: 'Blog',
         title: 'AI Revolution in Business',
         content: 'As we know, many businesses now use AI for various tasks, even replacing employees with AI in some cases.',
         imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
@@ -464,7 +464,7 @@ export class NewsBlock extends LitElement {
             <div class="card-content ${card.expanded ? 'expanded' : ''}">
               <p>${card.content}</p>
               ${card.expanded ? html`
-                <a href="/path/to/your/page/${card.title.replace(/\s+/g, '-').toLowerCase()}" class="more-btn card-more-btn">MORE</a>
+                <a href="/news/news-subpage.html" class="more-btn card-more-btn">MORE</a>
               ` : ''}
             </div>
           </div>

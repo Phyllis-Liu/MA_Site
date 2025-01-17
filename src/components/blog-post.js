@@ -131,8 +131,8 @@ export class BlogPost extends LitElement {
       {
         section: 'News',
         type: 'Blog',
-        title: 'AI-operated store in Dubai',
-        content: 'As we know, many businesses now use AI for various tasks, even replacing employees with AI in some cases. Below is a video of the latest fully AI-operated store in Dubai. Thank you Colomba Fasano for sharing this.'
+        title: 'AI Revolution in Business',
+        content: 'As we know, many businesses now use AI for various tasks, even replacing employees with AI in some cases.'
       },
       {
         section: 'News',
