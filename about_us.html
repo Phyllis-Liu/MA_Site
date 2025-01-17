@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company About Page</title>
+  <script type="module" src="/src/about_us_app.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 確保滾動位置正確 */
+    [id] {
+      scroll-margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <company-page></company-page>
+
+  <header-nav></header-nav>
+  <about-header></about-header>
+  <div id="about-ma" class="section">
+    <about-ma></about-ma>
+  </div>
+  <div id="banner-section" class="section">
+    <banner-section></banner-section>
+  </div>
+  <div id="management-words" class="section">
+    <management-words></management-words>
+  </div>
+  <div id="history-section" class="section">
+    <history-section></history-section>
+  </div>
+  <div id="core-value-section" class="section">
+    <core-value-section></core-value-section>
+  </div>
+  <div id="footer-section" class="section">
+    <footer-section></footer-section>
+  </div>
+
+</body>
+</html>
