@@ -108,12 +108,46 @@ class FooterSection extends LitElement {
     @media (max-width: 1024px) {
       .footer-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+      
+      .footer-section h3 {
+        font-size: 1.1rem;
       }
     }
 
     @media (max-width: 640px) {
       .footer-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-section h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .nav-menu li {
+        margin-bottom: 0.8rem;
+      }
+
+      .contact-info p {
+        font-size: 0.9rem;
+      }
+
+      .subscribe-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+
+      .copyright {
+        font-size: 0.8rem;
+        padding-top: 30px;
       }
     }
   `;

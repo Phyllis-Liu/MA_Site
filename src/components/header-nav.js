@@ -4,7 +4,8 @@ class HeaderNav extends LitElement {
   static properties = {
     isDropdownOpen: { type: Boolean },
     selectedLanguage: { type: String },
-    isScrolled: { type: Boolean }
+    isScrolled: { type: Boolean },
+    isMobileMenuOpen: { type: Boolean }
   };
 
   constructor() {
@@ -13,6 +14,7 @@ class HeaderNav extends LitElement {
     this.selectedLanguage = 'EN';
     this.languages = ['EN', 'TW', 'JP', 'ES', 'DE', 'FR'];
     this.isScrolled = false;
+    this.isMobileMenuOpen = false;
   }
 
   connectedCallback() {
@@ -27,6 +29,10 @@ class HeaderNav extends LitElement {
     window.removeEventListener('scroll', () => {
       this.isScrolled = window.scrollY > 50;
     });
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
   static styles = css`
@@ -145,6 +151,76 @@ class HeaderNav extends LitElement {
     .dropdown-item:hover {
       background-color: rgba(255, 255, 255, 0.1);
     }
+
+    /* Mobile Styles */
+    @media (max-width: 1024px) {
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 24px;
+        cursor: pointer;
+        z-index: 1001;
+      }
+
+      .hamburger-line {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+      }
+
+      .hamburger.open .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .hamburger.open .hamburger-line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.open .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+
+      .nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px;
+        transition: right 0.3s ease;
+      }
+
+      .nav-container.open {
+        right: 0;
+      }
+
+      .nav-item {
+        padding: 1rem;
+        font-size: 16px;
+      }
+
+      .web360-btn {
+        margin: 1rem;
+        width: calc(100% - 2rem);
+        text-align: center;
+      }
+
+      .language-select {
+        margin: 1rem;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .hamburger {
+        display: none;
+      }
+    }
   `;
 
   toggleDropdown() {
@@ -166,8 +242,15 @@ class HeaderNav extends LitElement {
             <rect width="50" height="12" x="45" y="23" fill="#ffffff"/>
           </svg>
         </a>
-        
-        <div class="nav-container">
+
+        <div class="hamburger ${this.isMobileMenuOpen ? 'open' : ''}" 
+             @click="${this.toggleMobileMenu}">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </div>
+
+        <div class="nav-container ${this.isMobileMenuOpen ? 'open' : ''}">
           <a href="about_us.html" class="nav-item">ABOUT US</a>
           <a href="/news" class="nav-item">NEWS</a>
           <a href="/product" class="nav-item">PRODUCT</a>
