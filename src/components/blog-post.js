@@ -166,8 +166,7 @@ export class BlogPost extends LitElement {
   }
 
   handleBack() {
-    // In practical applications, a "return to previous page" logic can be added.
-    console.log('Back button clicked');
+    window.location.href = '../News.html';
   }
 
   render() {
