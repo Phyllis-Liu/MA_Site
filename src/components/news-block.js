@@ -10,6 +10,46 @@ export class NewsBlock extends LitElement {
       margin-bottom: 30px;
     }
 
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .card {
+        padding: 10px;
+      }
+
+      .card-image {
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid {
+        gap: 10px;
+      }
+
+      .card-image {
+        height: 120px;
+      }
+
+      .card-title {
+        font-size: 1.1em;
+      }
+
+      .more-btn {
+        padding: 8px 20px;
+        font-size: 0.9em;
+      }
+    }
+
     .card {
       display: flex;
       flex-direction: column;

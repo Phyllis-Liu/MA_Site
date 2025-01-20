@@ -25,6 +25,27 @@ export class NewsBanner extends LitElement {
       font-weight: bold;
       z-index: 2;
       text-align: center;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+      :host {
+        height: 150px;
+      }
+
+      .banner-text {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :host {
+        height: 120px;
+      }
+
+      .banner-text {
+        font-size: 28px;
+      }
     }
 
     .background-svg {

@@ -10,6 +10,34 @@ export class NewsSelector extends LitElement {
       background-color: #f5f5f5;
     }
 
+    @media (max-width: 768px) {
+      :host {
+        padding: 15px;
+      }
+
+      .filter-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+
+      select {
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :host {
+        padding: 10px;
+      }
+
+      select {
+        padding: 5px 10px;
+        min-width: 100px;
+      }
+    }
+
     .filters {
       display: none;
     }
