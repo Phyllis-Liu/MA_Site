@@ -4,11 +4,11 @@ class AboutHeader extends LitElement {
   static styles = css`
     :host {
       display: block;
-      background-color: #f2f2f2;
+      background-color: #000000;
     }
 
     .hero-section {
-      padding: 60px 20px;
+      padding: 150px 20px;
       text-align: center;
       margin: 0;
     }
@@ -17,12 +17,13 @@ class AboutHeader extends LitElement {
       font-size: 32px;
       margin: 0 0 20px 0;
       font-weight: bold;
+      color: #fff;
     }
 
     .hero-subtitle {
       font-size: 18px;
       margin: 0;
-      color: #333;
+      color: #fff;
     }
 
     .nav-container {
@@ -61,7 +62,7 @@ class AboutHeader extends LitElement {
       padding: 8px 16px;
       transition: all 0.2s ease;
       position: relative;
-      color: #666;
+      color: #ffffff;
       text-align: center;
       display: block;
       font-size: 16px;

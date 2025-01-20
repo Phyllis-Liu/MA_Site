@@ -5,7 +5,8 @@ class HeaderNav extends LitElement {
     isDropdownOpen: { type: Boolean },
     selectedLanguage: { type: String },
     isScrolled: { type: Boolean },
-    isMobileMenuOpen: { type: Boolean }
+    isMobileMenuOpen: { type: Boolean },
+    isLightBackground: { type: Boolean }
   };
 
   constructor() {
@@ -15,6 +16,8 @@ class HeaderNav extends LitElement {
     this.languages = ['EN', 'TW', 'JP', 'ES', 'DE', 'FR'];
     this.isScrolled = false;
     this.isMobileMenuOpen = false;
+    this.isLightBackground = false;
+    this.observer = null;
   }
 
   connectedCallback() {
@@ -22,6 +25,36 @@ class HeaderNav extends LitElement {
     window.addEventListener('scroll', () => {
       this.isScrolled = window.scrollY > 50;
     });
+
+    // Observe banner and about-header background color
+    this.observer = new MutationObserver((mutations) => {
+      const target = mutations[0].target;
+      const bgColor = window.getComputedStyle(target).backgroundColor;
+      const rgb = bgColor.match(/\d+/g);
+      if (rgb) {
+        // Calculate luminance
+        const luminance = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255;
+        this.isLightBackground = luminance > 0.5;
+      }
+    });
+
+    // Observe both banner and about-header
+    const banner = document.querySelector('.banner');
+    const aboutHeader = document.querySelector('about-header');
+    
+    if (banner) {
+      this.observer.observe(banner, {
+        attributes: true,
+        attributeFilter: ['style']
+      });
+    }
+    
+    if (aboutHeader) {
+      this.observer.observe(aboutHeader, {
+        attributes: true,
+        attributeFilter: ['style']
+      });
+    }
   }
 
   disconnectedCallback() {
@@ -29,6 +62,9 @@ class HeaderNav extends LitElement {
     window.removeEventListener('scroll', () => {
       this.isScrolled = window.scrollY > 50;
     });
+    if (this.observer) {
+      this.observer.disconnect();
+    }
   }
 
   toggleMobileMenu() {
@@ -78,7 +114,7 @@ class HeaderNav extends LitElement {
     }
 
     .nav-item {
-      color: #fff;
+      color: var(--header-text-color, #fff);
       text-decoration: none;
       font-size: 14px;
       transition: color 0.3s;
@@ -284,6 +320,13 @@ class HeaderNav extends LitElement {
       } else {
         this.removeAttribute('scrolled');
       }
+    }
+
+    if (changedProperties.has('isLightBackground')) {
+      this.style.setProperty(
+        '--header-text-color',
+        this.isLightBackground ? '#000' : '#fff'
+      );
     }
   }
 }
