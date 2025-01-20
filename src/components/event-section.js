@@ -35,7 +35,7 @@ class EventSection extends LitElement {
     }
 
     .event-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
     }
 
     .event-image {

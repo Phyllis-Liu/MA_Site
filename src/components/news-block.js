@@ -58,6 +58,41 @@ export class NewsBlock extends LitElement {
       border-radius: 8px;
       background-color: #fff;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      position: relative;
+    }
+
+    .card:before,
+    .card:after {
+      pointer-events: none;
+      position: absolute;
+      content: '';
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      height: 5px;
+      opacity: 0;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: opacity;
+      transition-property: opacity;
+    }
+
+    .card:before {
+      bottom: 100%;
+      background: radial-gradient(ellipse at 50% 150%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+    }
+
+    .card:after {
+      top: 100%;
+      background: radial-gradient(ellipse at 50% -50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+    }
+
+    .card:hover:before,
+    .card:hover:after {
+      opacity: 1;
     }
 
     .card-image {
