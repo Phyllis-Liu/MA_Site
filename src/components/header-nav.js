@@ -293,7 +293,7 @@ class HeaderNav extends LitElement {
           <a href="/solution" class="nav-item">SOLUTION</a>
           <a href="/support" class="nav-item">TECH SUPPORT</a>
           <a href="/contact" class="nav-item">CONTACT US</a>
-          <a href="/web360" class="web360-btn">WEB360</a>
+          <a href="https://masterwork-space.sfo3.cdn.digitaloceanspaces.com/webgl/index.html" class="web360-btn" target="_blank">WEB360</a>
           
           <div class="language-select">
             <button class="language-button" @click="${this.toggleDropdown}">
