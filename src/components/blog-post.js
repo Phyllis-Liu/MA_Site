@@ -44,6 +44,27 @@ export class BlogPost extends LitElement {
       margin-bottom: 24px;
     }
 
+    .date {
+      margin-bottom: 10px;
+      color: #444;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .date::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23444'%3E%3Cpath d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
     .blog-image-container {
       position: relative;
       width: 100%;
@@ -132,13 +153,15 @@ export class BlogPost extends LitElement {
         section: 'News',
         type: 'Blog',
         title: 'AI Revolution in Business',
-        content: 'As we know, many businesses now use AI for various tasks, even replacing employees with AI in some cases.'
+        content: 'As we know, many businesses now use AI for various tasks, even replacing employees with AI in some cases.',
+        lastModified: '2024-01-15'
       },
       {
         section: 'News',
         type: 'Blog',
         title: 'Future of Retail Technology',
-        content: 'Another interesting article about retail technology...'
+        content: 'Another interesting article about retail technology...',
+        lastModified: '2024-01-10'
       }
     ];
     this.currentIndex = 0;
@@ -179,6 +202,7 @@ export class BlogPost extends LitElement {
       </nav>
       <div class="type-tag">${this.currentPost.type}</div>
       <h1 class="title">${this.currentPost.title}</h1>
+      <div class="date">DATE: ${this.currentPost.lastModified}</div>
       <!-- Image placeholder: 800x400 -->
       <div class="blog-image-container"></div>
       <div class="content">${this.currentPost.content}</div>
