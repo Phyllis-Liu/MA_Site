@@ -72,7 +72,9 @@ class AboutMa extends LitElement {
       <div id="about-ma" class="container">
         <div class="photo-section">
           <div class="left-column">
-            <div class="company-photo">Company photo</div>
+            <div class="company-photo">
+              <img src="image/company-photo2.png" alt="Company photo">
+            </div>
             <div class="why-us">
               <h2>Why Choose Us?</h2>
               <ul class="benefits-list">
