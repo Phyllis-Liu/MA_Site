@@ -53,7 +53,6 @@ class ManagementWords extends LitElement {
     .photo-container {
       width: 100%;
       height: 300px;
-      background: #f5f5f5;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -102,31 +101,21 @@ class ManagementWords extends LitElement {
       <div class="management-cards">
         <div class="management-card">
           <div class="photo-container">
-            <svg class="photo-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-              <rect width="100%" height="100%" fill="#f5f5f5"/>
-              <rect x="150" y="80" width="100" height="100" fill="#ddd" rx="50"/>
-              <rect x="130" y="200" width="140" height="20" fill="#ddd" rx="10"/>
-              <rect x="160" y="240" width="80" height="20" fill="#ddd" rx="10"/>
-            </svg>
+            <img class="photo-svg" src="image/Jason.png" alt="Jason Liu">
           </div>
           <div class="content">
             <h3 class="name">JASON LIU</h3>
-            <p class="position">-PRESIDENT</p>
+            <p class="position">-FOUNDER</p>
             <p class="quote">The best part of running Masterwork is having partners as friends for decades</p>
           </div>
         </div>
 
         <div class="management-card">
-          <div class="photo-container">
-            <svg class="photo-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-              <rect width="100%" height="100%" fill="#f5f5f5"/>
-              <rect x="150" y="80" width="100" height="100" fill="#ddd" rx="50"/>
-              <rect x="130" y="200" width="140" height="20" fill="#ddd" rx="10"/>
-              <rect x="160" y="240" width="80" height="20" fill="#ddd" rx="10"/>
-            </svg>
+         <div class="photo-container">
+            <img class="photo-svg" src="image/Julije.png" alt="Julije Drasinover">
           </div>
           <div class="content">
-            <h3 class="name">JULIJE</h3>
+            <h3 class="name">JULIJE DRASINOVER</h3>
             <p class="position">-CEO</p>
             <p class="quote">The best part of running Masterwork is having partners as friends for decades</p>
           </div>
