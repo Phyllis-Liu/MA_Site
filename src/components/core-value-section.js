@@ -23,13 +23,17 @@ class CoreValueSection extends LitElement {
       overflow: hidden;
     }
 
-    .background-svg {
+    .background-svg, .background-image {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       z-index: 1;
+    }
+
+    .background-image {
+      object-fit: cover;
     }
 
     .section-content {
@@ -97,7 +101,7 @@ class CoreValueSection extends LitElement {
       bottom: -10px;
       width: 40px;
       height: 2px;
-      background-color: #ff0000;
+      background-color: #b;
     }
 
     .pillar-description {
@@ -122,7 +126,7 @@ class CoreValueSection extends LitElement {
     .capability-title {
       font-size: 18px;
       font-weight: bold;
-      margin: 0 0 15px 0;
+      margin: 0 0 15px 0;f
       color: #333;
       position: relative;
     }
@@ -134,7 +138,7 @@ class CoreValueSection extends LitElement {
       bottom: -8px;
       width: 30px;
       height: 2px;
-      background-color: #ff0000;
+      background-color: #ffffff;
     }
 
     .capability-description {
@@ -149,25 +153,7 @@ class CoreValueSection extends LitElement {
       <h2 class="title">CORE VALUE</h2>
 
       <div class="section mission-section">
-        <svg class="background-svg" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <radialGradient id="stars" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-              <stop offset="0%" stop-color="#FFF" stop-opacity="0.3"/>
-              <stop offset="100%" stop-color="#000" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <rect width="100%" height="100%" fill="#000"/>
-          <circle cx="80%" cy="30%" r="1" fill="#FFF" opacity="0.5">
-            <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
-          </circle>
-          <circle cx="25%" cy="60%" r="1" fill="#FFF" opacity="0.7">
-            <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite"/>
-          </circle>
-          <circle cx="50%" cy="20%" r="1" fill="#FFF" opacity="0.3">
-            <animate attributeName="opacity" values="0.3;0.8;0.3" dur="5s" repeatCount="indefinite"/>
-          </circle>
-          <rect width="100%" height="100%" fill="url(#stars)"/>
-        </svg>
+        <img src="image/mission.png" class="background-image" alt="Mission background">
         <div class="section-content">
           <h3 class="section-title">MISSION</h3>
           <p class="section-description">
@@ -178,17 +164,7 @@ class CoreValueSection extends LitElement {
       </div>
 
       <div class="section vision-section">
-        <svg class="background-svg" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="cityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#2c3e50"/>
-              <stop offset="100%" stop-color="#3498db"/>
-            </linearGradient>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#cityGradient)"/>
-          <path d="M0 300 L50 300 L50 250 L100 250 L100 300 L150 300 L150 200 L200 200 L200 300 L250 300 L250 150 L300 150 L300 300 L350 300 L350 250 L400 250 L400 300 L450 300 L450 200 L500 200 L500 300 L550 300 L550 250 L600 250 L600 300 L650 300 L650 150 L700 150 L700 300 L750 300 L750 200 L800 200 L800 300 L850 300 L850 250 L900 250 L900 300 L950 300 L950 200 L1000 200 L1000 400 L0 400 Z" 
-                fill="#1a1a1a"/>
-        </svg>
+        <img src="image/vision.png" class="background-image" alt="Vision background">
         <div class="section-content">
           <h3 class="section-title">VISION</h3>
           <p class="section-description">Our company is built on three defined pillars:</p>
@@ -200,17 +176,7 @@ class CoreValueSection extends LitElement {
       </div>
 
       <div class="section value-section">
-        <svg class="background-svg" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <pattern id="circuit" width="50" height="50" patternUnits="userSpaceOnUse">
-              <path d="M10 10 L40 10 M25 10 L25 40 M10 25 L40 25 M10 40 L40 40" 
-                    stroke="#333" stroke-width="1" fill="none"/>
-              <circle cx="25" cy="25" r="3" fill="#444"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="#000"/>
-          <rect width="100%" height="100%" fill="url(#circuit)"/>
-        </svg>
+        <img src="image/value2.png" class="background-image" alt="Value background">
         <div class="section-content">
           <h3 class="section-title">VALUE</h3>
           <p class="section-description">
