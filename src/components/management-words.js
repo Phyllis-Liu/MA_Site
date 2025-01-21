@@ -39,6 +39,15 @@ class ManagementWords extends LitElement {
       align-items: center;
       background: #fff;
       padding: 20px;
+      position: relative;
+      overflow: hidden;
+      transition-duration: 0.3s;
+      transition-property: box-shadow, transform;
+    }
+
+    .management-card:hover {
+      box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+      transform: scale(1.02);
     }
 
     .photo-container {
@@ -48,11 +57,15 @@ class ManagementWords extends LitElement {
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
 
     .photo-svg {
       width: 100%;
       height: 100%;
+      max-width: 400px;
+      max-height: 300px;
+      object-fit: cover;
     }
 
     .content {
