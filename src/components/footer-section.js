@@ -166,6 +166,7 @@ class FooterSection extends LitElement {
             <ul class="nav-menu">
               <li><a href="/about_us">ABOUT US</a></li>
               <li><a href="/news">NEWS</a></li>
+              <li><a href="/event">EVENT</a></li>
               <li><a href="/product">PRODUCT</a></li>
               <li><a href="/solution">SOLUTION</a></li>
               <li><a href="/tech-support">TECH SUPPORT</a></li>

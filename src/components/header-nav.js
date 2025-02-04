@@ -288,8 +288,9 @@ class HeaderNav extends LitElement {
 
         <div class="nav-container ${this.isMobileMenuOpen ? 'open' : ''}">
           <a href="about_us.html" class="nav-item">ABOUT US</a>
-          <a href="/news" class="nav-item">NEWS</a>
-          <a href="/product" class="nav-item">PRODUCT</a>
+<a href="/news" class="nav-item">NEWS</a>
+<a href="/event" class="nav-item">EVENT</a>
+<a href="/product" class="nav-item">PRODUCT</a>
           <a href="/solution" class="nav-item">SOLUTION</a>
           <a href="/support" class="nav-item">TECH SUPPORT</a>
           <a href="/contact" class="nav-item">CONTACT US</a>
