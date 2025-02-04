@@ -4,7 +4,7 @@ export class EventBlock extends LitElement {
   static styles = css`
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr); /* 修改為4列 */
       grid-template-rows: repeat(2, auto);
       gap: 20px;
       margin-bottom: 30px;
@@ -97,7 +97,8 @@ export class EventBlock extends LitElement {
 
     .card-image {
       width: 100%;
-      height: 200px;
+      height: 100%; /* 設置為100%以保持正方形 */
+      aspect-ratio: 1; /* 確保圖片為正方形 */
       object-fit: cover;
       margin-bottom: 10px;
       border-radius: 5px;
@@ -110,13 +111,7 @@ export class EventBlock extends LitElement {
       margin-bottom: 10px;
     }
 
-    .card-type {
-      background-color: #333;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 15px;
-      font-size: 0.8em;
-    }
+
 
     .card-title {
       font-size: 1.2em;
@@ -138,6 +133,9 @@ export class EventBlock extends LitElement {
       font-size: 1.5em;
       cursor: pointer;
       padding: 0;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
     }
 
     .more-btn {
@@ -164,6 +162,7 @@ export class EventBlock extends LitElement {
       font-size: 0.9em;
       text-decoration: none;
       margin: 10px 0 0 auto;
+      transform: translateX(-20px); /* 向左移動 */
       float: right;
       clear: both;
     }
@@ -179,306 +178,116 @@ export class EventBlock extends LitElement {
   constructor() {
     super();
     this.currentPage = 1;
-    this.cardsPerPage = 6;
+    this.cardsPerPage = 8;
     this.displayedCards = [];
     this.cards = [
       // Event Type
       {
-        type: 'Event',
-        title: 'AI Revolution in Business',
+        
+        title: 'RETAILTECH JAPAN 2025',
         content: 'As we know, many businesses now use AI for various tasks, even replacing employees with AI in some cases.',
         imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Future of Digital Transformation',
         content: 'Digital transformation continues to reshape how businesses operate in the modern world.',
+        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Tech Industry Updates 2024',
         content: 'Latest developments in the technology sector and their impact on global markets.',
         imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Emerging Technology Trends',
         content: 'Exploring the latest technology trends shaping our future.',
+        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Sustainable Tech Solutions',
         content: 'How technology is driving sustainability initiatives worldwide.',
         imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Innovation in Healthcare Tech',
         content: 'Technology advancements revolutionizing healthcare delivery.',
+        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Cybersecurity Developments',
         content: 'Latest updates in cybersecurity protection and threats.',
         imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Remote Work Technologies',
         content: 'New tools and platforms enabling remote work efficiency.',
+        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Quantum Computing Progress',
         content: 'Recent breakthroughs in quantum computing research.',
         imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Green Tech Innovations',
         content: 'Environmental technology solutions making an impact.',
+        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Digital Privacy Updates',
         content: 'New developments in digital privacy and data protection.',
         imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Smart City Developments',
         content: 'Updates on smart city initiatives worldwide.',
+        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Blockchain Advancements',
         content: 'Latest developments in blockchain technology.',
         imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: '5G Network Expansion',
         content: 'Progress in global 5G network implementation.',
+        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
       {
-        type: 'Event',
+        
         title: 'Tech Education Trends',
         content: 'Changes in technology education and training.',
         imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
         expanded: false
       },
-      // Blog Type
-      {
-        type: 'Blog',
-        title: 'Understanding Cloud Computing',
-        content: 'A comprehensive guide to modern cloud computing solutions.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'Web Development Best Practices',
-        content: 'Essential practices for modern web development.',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'Mobile App Development Tips',
-        content: 'Key considerations for successful mobile app development.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'DevOps Implementation Guide',
-        content: 'Step-by-step guide to implementing DevOps practices.',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'UI/UX Design Principles',
-        content: 'Core principles for effective UI/UX design.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'Data Science Fundamentals',
-        content: 'Introduction to key data science concepts.',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'Machine Learning Basics',
-        content: 'Getting started with machine learning.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'Agile Development Tips',
-        content: 'Improving your agile development process.',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'Software Testing Strategies',
-        content: 'Effective strategies for software testing.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'API Design Guidelines',
-        content: 'Best practices for API design and implementation.',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'Frontend Development Tools',
-        content: 'Essential tools for frontend development.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'Backend Architecture Tips',
-        content: 'Guidelines for robust backend architecture.',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'Database Optimization Guide',
-        content: 'Tips for optimizing database performance.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'Security Best Practices',
-        content: 'Essential security practices for developers.',
-        expanded: false
-      },
-      {
-        type: 'Blog',
-        title: 'Code Review Guidelines',
-        content: 'Effective code review practices and tips.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      // Case Study Type
-      {
-        type: 'Case Study',
-        title: 'Digital Transformation Success',
-        content: 'How a traditional business achieved digital transformation.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'Cloud Migration Project',
-        content: 'Successful cloud migration for enterprise.',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'AI Implementation Results',
-        content: 'Results of AI implementation in retail.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'E-commerce Platform Launch',
-        content: 'Launch strategy and results for e-commerce platform.',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'Mobile App Success Story',
-        content: 'Development and launch of successful mobile app.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'DevOps Transformation',
-        content: 'Implementation of DevOps practices and results.',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'Data Analytics Impact',
-        content: 'How data analytics transformed business decisions.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'Security Infrastructure Upgrade',
-        content: 'Major security infrastructure improvement project.',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'CRM Implementation',
-        content: 'Successful CRM system implementation case.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'Digital Marketing Campaign',
-        content: 'Results of integrated digital marketing campaign.',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'Automation Success Story',
-        content: 'Process automation implementation and results.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'Website Redesign Impact',
-        content: 'Results of major website redesign project.',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'IoT Implementation',
-        content: 'IoT solution implementation case study.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'Blockchain Integration',
-        content: 'Blockchain technology integration project.',
-        expanded: false
-      },
-      {
-        type: 'Case Study',
-        title: 'Machine Learning Application',
-        content: 'Practical application of machine learning.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
-        expanded: false
-      }
+     
     ];
   }
 

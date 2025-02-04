@@ -76,8 +76,10 @@ class EventSection extends LitElement {
         
         <div class="event-grid">
           <a href="/events/bfg-show" class="event-card">
-            <img class="event-image" src="image/Event02.png" alt="BFG SHOW 2023" />
-            <h3 class="event-title">BFG SHOW 2023</h3>
+            <img class="event-image" src="image/Event04.png" alt="RETAILTECH JAPAN 2025
+" />
+            <h3 class="event-title">RETAILTECH JAPAN 2025
+</h3>
           </a>
 
           <a href="/events/eurocis" class="event-card">
@@ -91,8 +93,8 @@ class EventSection extends LitElement {
           </a>
 
           <a href="/events/retailtech-japan" class="event-card">
-            <img class="event-image" src="image/Event04.png" alt="RETAILTECH JAPAN 2025" />
-            <h3 class="event-title">RETAILTECH JAPAN 2025</h3>
+            <img class="event-image" src="image/Event02.png" alt="BFG SHOW 2023" />
+            <h3 class="event-title">BFG SHOW 2023</h3>
           </a>
         </div>
       </div>

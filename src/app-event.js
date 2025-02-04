@@ -24,7 +24,9 @@ export class AppEvent extends LitElement {
       <header-nav></header-nav>
 <event-banner></event-banner>
 <div style="height: 20px;"></div>
-<event-block></event-block>
+<div style="padding: 0 10px;">
+  <event-block></event-block>
+</div>
       <footer-section></footer-section>
     `;
   }
