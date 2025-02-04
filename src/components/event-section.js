@@ -76,63 +76,23 @@ class EventSection extends LitElement {
         
         <div class="event-grid">
           <a href="/events/bfg-show" class="event-card">
-            <svg class="event-image" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#600;stop-opacity:1" />
-                  <stop offset="100%" style="stop-color:#900;stop-opacity:1" />
-                </linearGradient>
-              </defs>
-              <rect width="400" height="400" fill="url(#bgGrad1)"/>
-              <circle cx="200" cy="200" r="80" fill="#fff" opacity="0.1"/>
-              <path d="M160 160 h80 v80 h-80 z" fill="#fff" opacity="0.2"/>
-            </svg>
-            <h3 class="event-title">BFG SHOW 2024</h3>
+            <img class="event-image" src="image/Event02.png" alt="BFG SHOW 2023" />
+            <h3 class="event-title">BFG SHOW 2023</h3>
           </a>
 
           <a href="/events/eurocis" class="event-card">
-            <svg class="event-image" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#147;stop-opacity:1" />
-                  <stop offset="100%" style="stop-color:#36a;stop-opacity:1" />
-                </linearGradient>
-              </defs>
-              <rect width="400" height="400" fill="url(#bgGrad2)"/>
-              <circle cx="200" cy="200" r="100" fill="#fff" opacity="0.1"/>
-              <rect x="150" y="150" width="100" height="100" fill="#fff" opacity="0.2"/>
-            </svg>
+            <img class="event-image" src="image/Event01.png" alt="EUROCIS 2024" />
             <h3 class="event-title">EUROCIS 2024</h3>
           </a>
 
           <a href="/events/hostelco" class="event-card">
-            <svg class="event-image" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#b80;stop-opacity:1" />
-                  <stop offset="100%" style="stop-color:#da0;stop-opacity:1" />
-                </linearGradient>
-              </defs>
-              <rect width="400" height="400" fill="url(#bgGrad3)"/>
-              <polygon points="200,100 300,300 100,300" fill="#fff" opacity="0.1"/>
-              <circle cx="200" cy="200" r="60" fill="#fff" opacity="0.2"/>
-            </svg>
-            <h3 class="event-title">HOSTELCO 2024</h3>
+            <img class="event-image" src="image/Event03.png" alt="NRF 2025" />
+            <h3 class="event-title">NRF 2025</h3>
           </a>
 
           <a href="/events/retailtech-japan" class="event-card">
-            <svg class="event-image" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#058;stop-opacity:1" />
-                  <stop offset="100%" style="stop-color:#27a;stop-opacity:1" />
-                </linearGradient>
-              </defs>
-              <rect width="400" height="400" fill="url(#bgGrad4)"/>
-              <rect x="100" y="100" width="200" height="200" fill="#fff" opacity="0.1"/>
-              <circle cx="200" cy="200" r="70" fill="#fff" opacity="0.2"/>
-            </svg>
-            <h3 class="event-title">RETAILTECH JAPAN 2024</h3>
+            <img class="event-image" src="image/Event04.png" alt="RETAILTECH JAPAN 2025" />
+            <h3 class="event-title">RETAILTECH JAPAN 2025</h3>
           </a>
         </div>
       </div>
