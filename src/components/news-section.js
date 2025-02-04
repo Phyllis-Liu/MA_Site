@@ -103,16 +103,11 @@ class NewsSection extends LitElement {
         <div class="news-grid">
           <div class="news-card">
             <div class="news-image-container">
-              <svg class="news-image-svg" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                <rect width="160" height="100" x="20" y="25" fill="#ddd"/>
-                <rect width="120" height="15" x="40" y="45" fill="#ccc"/>
-                <rect width="80" height="15" x="60" y="70" fill="#ccc"/>
-                <rect width="100" height="15" x="50" y="95" fill="#ccc"/>
-              </svg>
+              <img class="news-image-svg" src="image/NewsSection02.png" alt="News Section Image" />
             </div>
             <div class="news-content">
-              <h3 class="news-title">MA WEBSITE LIST</h3>
-              <a href="/news/website-list/details" class="more-link">
+              <h3 class="news-title">AI Revolution in Business</h3>
+              <a href="/news/news-subpage.html" class="more-link">
                 <span class="more-button">MORE</span>
               </a>
             </div>
@@ -120,11 +115,7 @@ class NewsSection extends LitElement {
 
           <div class="news-card">
             <div class="news-image-container">
-              <svg class="news-image-svg" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100" height="120" x="50" y="15" fill="#ddd" rx="10"/>
-                <rect width="80" height="100" x="60" y="25" fill="#ccc" rx="5"/>
-                <circle cx="100" cy="135" r="6" fill="#ccc"/>
-              </svg>
+              <img class="news-image-svg" src="image/NewsSection03.png" alt="News Section Image" />
             </div>
             <div class="news-content">
               <h3 class="news-title">MA META APP</h3>
@@ -136,11 +127,7 @@ class NewsSection extends LitElement {
 
           <div class="news-card">
             <div class="news-image-container">
-              <svg class="news-image-svg" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="75" r="50" fill="#ddd"/>
-                <path d="M70 90 L100 40 L130 90 Z" fill="#ccc"/>
-                <circle cx="100" cy="75" r="20" fill="#bbb"/>
-              </svg>
+              <img class="news-image-svg" src="image/NewsSection01.png" alt="News Section Image" />
             </div>
             <div class="news-content">
               <h3 class="news-title">MA-MONETECH CONTINUES TO EXPAND ITS MARKET LEADERSHIP IN ......</h3>
@@ -152,12 +139,7 @@ class NewsSection extends LitElement {
 
           <div class="news-card">
             <div class="news-image-container">
-              <svg class="news-image-svg" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                <rect width="140" height="80" x="30" y="35" fill="#ddd"/>
-                <rect width="40" height="60" x="40" y="45" fill="#ccc"/>
-                <rect width="80" height="20" x="90" y="45" fill="#ccc"/>
-                <rect width="80" height="20" x="90" y="75" fill="#ccc"/>
-              </svg>
+              <img class="news-image-svg" src="image/NewsSection04.png" alt="News Section Image" />
             </div>
             <div class="news-content">
               <h3 class="news-title">KUAN INSTALLATION PROCESS IN SAUDI ARABIA</h3>
