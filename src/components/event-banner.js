@@ -10,6 +10,7 @@ export class EventBanner extends LitElement {
     }
 
     .banner-container {
+      padding: 20px 0; // 增加上下內邊距
       position: relative;
       width: 100%;
       height: 100%;
