@@ -1,9 +1,9 @@
 import { LitElement, html, css } from 'lit';
 import './components/header-nav.js';
 import './components/footer-section.js';
-import './components/blog-post.js';
+import './components/event-post.js';
 
-export class NewsPage extends LitElement {
+export class EventPage extends LitElement {
   static styles = css`
     * {
       margin: 0;
@@ -11,7 +11,7 @@ export class NewsPage extends LitElement {
       box-sizing: border-box;
     }
 
-    .news-banner {
+    .event-banner {
       height: 400px;
       background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('banner-image.jpg');
       background-size: cover;
@@ -27,7 +27,7 @@ export class NewsPage extends LitElement {
       text-align: center;
     }
 
-    .news-content {
+    .event-content {
       max-width: 1200px;
       margin: 2rem auto;
       padding: 0 1rem;
@@ -43,12 +43,12 @@ export class NewsPage extends LitElement {
     return html`
       <header-nav></header-nav>
 
-      <section class="news-banner">
-        <h1 class="banner-title">NEWS</h1>
+      <section class="event-banner">
+        <h1 class="banner-title">EVENTS</h1>
       </section>
 
-      <div class="news-content">
-        <blog-post></blog-post>
+      <div class="event-content">
+        <event-post></event-post>
       </div>
 
       <footer-section></footer-section>
@@ -56,4 +56,4 @@ export class NewsPage extends LitElement {
   }
 }
 
-customElements.define('news-page', NewsPage);
+customElements.define('event-page', EventPage);

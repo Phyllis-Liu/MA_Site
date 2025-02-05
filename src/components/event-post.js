@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 
-export class BlogPost extends LitElement {
+export class EventPost extends LitElement {
   static styles = css`
     :host {
       display: block;
@@ -65,7 +65,7 @@ export class BlogPost extends LitElement {
       background-position: center;
     }
 
-    .blog-image-container {
+    .event-image-container {
       position: relative;
       width: 100%;
       height: 400px;
@@ -150,18 +150,18 @@ export class BlogPost extends LitElement {
     super();
     this.posts = [
       {
-        section: 'News',
-        type: 'Blog',
-        title: 'AI Revolution in Business',
+        section: 'Events',
+        type: 'Exhibition',
+        title: 'RETAILTECH JAPAN 2025',
         content: 'As we know, many businesses now use AI for various tasks, even replacing employees with AI in some cases.',
-        lastModified: '2024-01-15'
+        lastModified: '2025-03-05'
       },
       {
-        section: 'News',
-        type: 'Blog',
-        title: 'Future of Retail Technology',
-        content: 'Another interesting article about retail technology...',
-        lastModified: '2024-01-10'
+        section: 'Events',
+        type: 'Exhibition',
+        title: 'EUROCIS 2025',
+        content: 'Digital transformation continues to reshape how businesses operate in the modern world.',
+        lastModified: '2025-02-27'
       }
     ];
     this.currentIndex = 0;
@@ -189,7 +189,7 @@ export class BlogPost extends LitElement {
   }
 
   handleBack() {
-    window.location.href = '../News.html';
+    window.location.href = '../event.html';
   }
 
   render() {
@@ -204,7 +204,7 @@ export class BlogPost extends LitElement {
       <h1 class="title">${this.currentPost.title}</h1>
       <div class="date">DATE: ${this.currentPost.lastModified}</div>
       <!-- Image placeholder: 800x400 -->
-      <div class="blog-image-container"></div>
+      <div class="event-image-container"></div>
       <div class="content">${this.currentPost.content}</div>
       <div class="controls">
         <button class="back-button" @click=${this.handleBack}>
@@ -230,4 +230,4 @@ export class BlogPost extends LitElement {
   }
 }
 
-customElements.define('blog-post', BlogPost);
+customElements.define('event-post', EventPost);

@@ -348,7 +348,8 @@ export class EventBlock extends LitElement {
             <div class="card-content ${card.expanded ? 'expanded' : ''}">
               <p>${card.content}</p>
               ${card.expanded ? html`
-                <a href="/event/event-subpage.html" class="more-btn card-more-btn">MORE</a>
+                <a href="${card.title === 'RETAILTECH JAPAN 2025' ? './event/event-subpage.html' : '#'}" 
+                   class="more-btn card-more-btn">MORE</a>
               ` : ''}
             </div>
           </div>
