@@ -75,25 +75,23 @@ class EventSection extends LitElement {
         <h2 class="title">LATEST EVENTS</h2>
         
         <div class="event-grid">
-          <a href="/events/bfg-show" class="event-card">
-            <img class="event-image" src="image/Event04.png" alt="RETAILTECH JAPAN 2025
-" />
-            <h3 class="event-title">RETAILTECH JAPAN 2025
-</h3>
+          <a href="event/event-subpage.html" class="event-card">
+            <img class="event-image" src="/image/Event04.png" alt="RETAILTECH JAPAN 2025" />
+            <h3 class="event-title">RETAILTECH JAPAN 2025</h3>
           </a>
 
-          <a href="/events/eurocis" class="event-card">
-            <img class="event-image" src="image/Event01.png" alt="EUROCIS 2024" />
+          <a href="event.html" class="event-card">
+            <img class="event-image" src="/image/Event01.png" alt="EUROCIS 2024" />
             <h3 class="event-title">EUROCIS 2024</h3>
           </a>
 
-          <a href="/events/hostelco" class="event-card">
-            <img class="event-image" src="image/Event03.png" alt="NRF 2025" />
+          <a href="event.html" class="event-card">
+            <img class="event-image" src="/image/Event03.png" alt="NRF 2025" />
             <h3 class="event-title">NRF 2025</h3>
           </a>
 
-          <a href="/events/retailtech-japan" class="event-card">
-            <img class="event-image" src="image/Event02.png" alt="BFG SHOW 2023" />
+          <a href="event.html" class="event-card">
+            <img class="event-image" src="/image/Event02.png" alt="BFG SHOW 2023" />
             <h3 class="event-title">BFG SHOW 2023</h3>
           </a>
         </div>
