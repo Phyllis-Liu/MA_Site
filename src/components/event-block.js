@@ -186,28 +186,28 @@ export class EventBlock extends LitElement {
         
         title: 'RETAILTECH JAPAN 2025',
         content: 'As we know, many businesses now use AI for various tasks, even replacing employees with AI in some cases.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
+        imageUrl: './image/Event04.png',
         expanded: false
       },
       {
         
-        title: 'Future of Digital Transformation',
+        title: 'EUROCIS 2025',
         content: 'Digital transformation continues to reshape how businesses operate in the modern world.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
+        imageUrl: './image/Event01.png',
         expanded: false
       },
       {
         
-        title: 'Tech Industry Updates 2024',
+        title: 'NRF 2025',
         content: 'Latest developments in the technology sector and their impact on global markets.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
+        imageUrl: './image/Event03.png',
         expanded: false
       },
       {
         
-        title: 'Emerging Technology Trends',
+        title: 'BFG SHOW 2023',
         content: 'Exploring the latest technology trends shaping our future.',
-        imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3',
+        imageUrl: './image/Event02.png',
         expanded: false
       },
       {
