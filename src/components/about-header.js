@@ -5,11 +5,13 @@ class AboutHeader extends LitElement {
     :host {
       display: block;
       background-color: #000000;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
     }
 
     .hero-section {
       padding: 150px 20px;
       text-align: center;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
       margin: 0;
     }
 
@@ -56,6 +58,21 @@ class AboutHeader extends LitElement {
       grid-column: 6;
     }
 
+    .hero-title {
+      font-size: 32px;
+      margin: 0 0 20px 0;
+      font-weight: bold;
+      color: #fff;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      margin: 0;
+      color: #fff;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
+    }
+
     .nav-item {
       cursor: pointer;
       font-weight: bold;
@@ -67,6 +84,7 @@ class AboutHeader extends LitElement {
       display: block;
       font-size: 16px;
       will-change: transform, color;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
     }
 
     .nav-item::after {

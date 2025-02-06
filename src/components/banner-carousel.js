@@ -49,6 +49,7 @@ class BannerCarousel extends LitElement {
       position: relative;
       height: 800px;
       overflow: hidden;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
     }
 
     .carousel {
@@ -86,11 +87,13 @@ class BannerCarousel extends LitElement {
       font-weight: bold;
       white-space: pre-line;
       margin-bottom: 1rem;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
     }
 
     .slide-subtitle {
       font-size: 1.2rem;
       opacity: 0.8;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
     }
 
     .dots {

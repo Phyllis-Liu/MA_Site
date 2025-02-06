@@ -2,11 +2,14 @@ import { LitElement, html, css } from 'lit';
 
 class EventSection extends LitElement {
   static styles = css`
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap');
+
     :host {
       display: block;
       background-color: #000;
       padding: 80px 20px;
       color: white;
+      font-family: 'Source Sans 3', sans-serif; /* 設置字體 */
     }
 
     .container {
@@ -17,6 +20,7 @@ class EventSection extends LitElement {
     .title {
       font-size: 2.5rem;
       margin-bottom: 3rem;
+      font-family: 'Source Sans 3', sans-serif; /* 確保標題也使用 Source Sans 3 */
     }
 
     .event-grid {
@@ -32,6 +36,7 @@ class EventSection extends LitElement {
       text-decoration: none;
       color: white;
       transition: transform 0.3s ease;
+      font-family: 'Source Sans 3', sans-serif; /* 確保 event-card 也使用 Source Sans 3 */
     }
 
     .event-card:hover {
@@ -50,6 +55,7 @@ class EventSection extends LitElement {
       padding: 15px;
       text-align: center;
       transition: color 0.3s ease;
+      font-family: 'Source Sans 3', sans-serif; /* 確保 event-title 也使用 Source Sans 3 */
     }
 
     .event-card:hover .event-title {

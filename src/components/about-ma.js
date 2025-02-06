@@ -4,12 +4,14 @@ class AboutMa extends LitElement {
   static styles = css`
     :host {
       display: block;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
     }
 
     .container {
       padding: 60px 20px;
       max-width: 1200px;
       margin: 0 auto;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
     }
 
     .photo-section {
@@ -38,6 +40,7 @@ class AboutMa extends LitElement {
       margin-bottom: 24px;
       line-height: 1.6;
       color: #333;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
     }
 
     .why-us {
@@ -48,6 +51,7 @@ class AboutMa extends LitElement {
       font-size: 24px;
       margin-bottom: 20px;
       color: #333;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
     }
 
     .benefits-list {
@@ -61,9 +65,16 @@ class AboutMa extends LitElement {
       line-height: 1.5;
     }
 
+    .benefit-item {
+      margin-bottom: 16px;
+      line-height: 1.5;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
+    }
+
     .benefit-item strong {
       color: #333;
       margin-right: 8px;
+      font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
     }
   `;
 
