@@ -102,9 +102,9 @@ class HeaderNav extends LitElement {
       text-decoration: none;
     }
 
-    .logo-svg {
+    .logo-img {
       height: 40px;
-      width: 120px;
+      width: auto;
     }
 
     .nav-container {
@@ -272,11 +272,7 @@ class HeaderNav extends LitElement {
     return html`
       <div class="header-container">
         <a href="/" class="logo">
-          <svg class="logo-svg" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
-            <rect width="40" height="40" x="0" y="0" fill="#ff0000"/>
-            <rect width="70" height="12" x="45" y="5" fill="#ffffff"/>
-            <rect width="50" height="12" x="45" y="23" fill="#ffffff"/>
-          </svg>
+          <img src="image/MA-logo.png" alt="Logo" class="logo-img" />
         </a>
 
         <div class="hamburger ${this.isMobileMenuOpen ? 'open' : ''}" 
@@ -288,9 +284,9 @@ class HeaderNav extends LitElement {
 
         <div class="nav-container ${this.isMobileMenuOpen ? 'open' : ''}">
           <a href="about_us.html" class="nav-item">ABOUT US</a>
-<a href="/news" class="nav-item">NEWS</a>
-<a href="/event" class="nav-item">EVENT</a>
-<a href="/product" class="nav-item">PRODUCT</a>
+          <a href="/news" class="nav-item">NEWS</a>
+          <a href="/event" class="nav-item">EVENT</a>
+          <a href="/product" class="nav-item">PRODUCT</a>
           <a href="/solution" class="nav-item">SOLUTION</a>
           <a href="/support" class="nav-item">TECH SUPPORT</a>
           <a href="/contact" class="nav-item">CONTACT US</a>
