@@ -15,7 +15,13 @@ class ContactPage extends LitElement {
     }
   `;
 
-  
+  render() {
+    return html`
+      <header-nav></header-nav>
+      <contact-form></contact-form>
+      <footer-section></footer-section>
+    `;
+  }
 }
 
 customElements.define('contact-page', ContactPage);

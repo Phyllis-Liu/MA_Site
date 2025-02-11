@@ -289,7 +289,7 @@ class HeaderNav extends LitElement {
           <a href="/product" class="nav-item">PRODUCT</a>
           <a href="/solution" class="nav-item">SOLUTION</a>
           <a href="/support" class="nav-item">TECH SUPPORT</a>
-          <a href="/contact" class="nav-item">CONTACT US</a>
+          <a href="/contact_us.html" class="nav-item">CONTACT US</a>
           <a href="https://masterwork-space.sfo3.cdn.digitaloceanspaces.com/webgl/index.html" class="web360-btn" target="_blank">WEB360</a>
           
           <div class="language-select">

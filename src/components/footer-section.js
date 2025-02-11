@@ -170,7 +170,7 @@ class FooterSection extends LitElement {
               <li><a href="/product">PRODUCT</a></li>
               <li><a href="/solution">SOLUTION</a></li>
               <li><a href="/tech-support">TECH SUPPORT</a></li>
-              <li><a href="/contact">CONTACT US</a></li>
+              <li><a href="/contact_us.html">CONTACT US</a></li>
               <li><a href="/privacy">PRIVACY POLICY</a></li>
               <li><a href="/cookie">COOKIE POLICY</a></li>
             </ul>
