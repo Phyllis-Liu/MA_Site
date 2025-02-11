@@ -1,11 +1,11 @@
 import { LitElement, html, css } from 'lit';
 
-export class NewsBanner extends LitElement {
+export class ContactBanner extends LitElement {
   static styles = css`
     :host {
       display: block;
       position: relative;
-      height: 200px;
+      height: 200px; /* 確保與其他 banner 高度一致 */
       overflow: hidden;
     }
 
@@ -73,10 +73,10 @@ export class NewsBanner extends LitElement {
             opacity="0.5"
           />
         </svg>
-        <div class="banner-text">NEWS</div>
+        <div class="banner-text">Contact Us</div>
       </div>
     `;
   }
 }
 
-customElements.define('news-banner', NewsBanner);
+customElements.define('contact-banner', ContactBanner);

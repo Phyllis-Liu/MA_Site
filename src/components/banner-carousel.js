@@ -52,6 +52,10 @@ class BannerCarousel extends LitElement {
       font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
     }
 
+    @media (max-width: 768px) {
+      height: 600px; /* Adjust height for smaller screens */
+    }
+
     .carousel {
       height: 100%;
       position: relative;
@@ -90,10 +94,22 @@ class BannerCarousel extends LitElement {
       font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
     }
 
+    @media (max-width: 768px) {
+      .slide-title {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+      }
+    }
+
     .slide-subtitle {
       font-size: 1.2rem;
       opacity: 0.8;
       font-family: 'Source Sans 3', sans-serif; /* 添加字體設置 */
+    }
+
+    @media (max-width: 768px) {
+      .slide-subtitle {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+      }
     }
 
     .dots {

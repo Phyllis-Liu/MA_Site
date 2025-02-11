@@ -10,7 +10,7 @@ export class EventBanner extends LitElement {
     }
 
     .banner-container {
-      padding: 20px 0; // 增加上下內邊距
+      padding: 20px 0; // 統一上下內邊距
       position: relative;
       width: 100%;
       height: 100%;
@@ -22,7 +22,7 @@ export class EventBanner extends LitElement {
 
     .banner-text {
       color: white;
-      font-size: 48px;
+      font-size: 48px; // 統一字體大小
       font-weight: bold;
       z-index: 2;
       text-align: center;

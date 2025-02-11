@@ -38,23 +38,40 @@ class HeaderNav extends LitElement {
       }
     });
 
-    // Observe both banner and about-header
-    const banner = document.querySelector('.banner');
-    const aboutHeader = document.querySelector('about-header');
+    // Observe banner, about-header, and contact-form
+    const elementsToObserve = [
+      document.querySelector('.banner'),
+      document.querySelector('about-header'),
+      document.querySelector('contact-form')
+    ];
     
-    if (banner) {
-      this.observer.observe(banner, {
-        attributes: true,
-        attributeFilter: ['style']
-      });
-    }
-    
-    if (aboutHeader) {
-      this.observer.observe(aboutHeader, {
-        attributes: true,
-        attributeFilter: ['style']
-      });
-    }
+    elementsToObserve.forEach(element => {
+      if (element) {
+        this.observer.observe(element, {
+          attributes: true,
+          attributeFilter: ['style'],
+          subtree: true,
+          childList: true
+        });
+        
+        // 立即檢查背景色
+        const bgColor = window.getComputedStyle(element).backgroundColor;
+        const rgb = bgColor.match(/\d+/g);
+        if (rgb) {
+          const hexColor = this.rgbToHex(parseInt(rgb[0]), parseInt(rgb[1]), parseInt(rgb[2]));
+          if (hexColor === '#f5f5f5') {
+            this.style.setProperty('--header-text-color', '#000000');
+          } else {
+            const luminance = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255;
+            this.isLightBackground = luminance > 0.5;
+          }
+        }
+      }
+    });
+  }
+
+  rgbToHex(r, g, b) {
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
   }
 
   disconnectedCallback() {
@@ -96,7 +113,7 @@ class HeaderNav extends LitElement {
     }
 
     .logo {
-      color: #fff;
+      color: var(--header-text-color, #fff);
       display: flex;
       align-items: center;
       text-decoration: none;
@@ -133,18 +150,17 @@ class HeaderNav extends LitElement {
       text-decoration: none;
       font-weight: bold;
       transition: all 0.3s ease;
-      border: 1px solid transparent;
+      border: 1px solid var(--header-text-color, #fff);
     }
 
     .web360-btn:hover {
-      background-color: #000;
-      color: #fff;
-      border: 1px solid #fff;
+      background-color: transparent;
+      color: var(--header-text-color, #fff);
     }
 
     .language-select {
       position: relative;
-      color: #fff;
+      color: var(--header-text-color, #fff);
       cursor: pointer;
     }
 
@@ -155,7 +171,7 @@ class HeaderNav extends LitElement {
       padding: 4px 8px;
       border: none;
       background: none;
-      color: #fff;
+      color: var(--header-text-color, #fff);
       cursor: pointer;
     }
 
@@ -163,7 +179,7 @@ class HeaderNav extends LitElement {
       position: absolute;
       top: 100%;
       right: 0;
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: var(--dropdown-bg-color, rgba(0, 0, 0, 0.9));
       min-width: 100px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       border-radius: 4px;
@@ -176,7 +192,7 @@ class HeaderNav extends LitElement {
     }
 
     .dropdown-item {
-      color: #fff;
+      color: var(--header-text-color, #fff);
       padding: 8px 12px;
       text-decoration: none;
       display: block;
@@ -185,7 +201,7 @@ class HeaderNav extends LitElement {
     }
 
     .dropdown-item:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(128, 128, 128, 0.2);
     }
 
     /* Mobile Styles */
@@ -194,16 +210,16 @@ class HeaderNav extends LitElement {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 30px;
-        height: 24px;
+        width: 40px;
+        height: 32px;
         cursor: pointer;
         z-index: 1001;
       }
 
       .hamburger-line {
         width: 100%;
-        height: 3px;
-        background-color: #fff;
+        height: 4px;
+        background-color: var(--header-text-color, #fff);
         transition: all 0.3s ease;
       }
 
@@ -225,7 +241,7 @@ class HeaderNav extends LitElement {
         right: -100%;
         height: 100vh;
         width: 300px;
-        background-color: rgba(0, 0, 0, 0.95);
+        background-color: var(--nav-bg-color, rgba(0, 0, 0, 0.95));
         flex-direction: column;
         justify-content: flex-start;
         padding-top: 80px;
@@ -237,8 +253,8 @@ class HeaderNav extends LitElement {
       }
 
       .nav-item {
-        padding: 1rem;
-        font-size: 16px;
+        padding: 1.2rem;
+        font-size: 18px;
       }
 
       .web360-btn {
@@ -249,6 +265,19 @@ class HeaderNav extends LitElement {
 
       .language-select {
         margin: 1rem;
+        font-size: 18px; /* Increase font size */
+      }
+
+      .language-button {
+        padding: 0.8rem 1.2rem; /* Increase padding */
+      }
+
+      .dropdown-content {
+        min-width: 120px; /* Increase width */
+      }
+
+      .dropdown-item {
+        padding: 1rem 1.5rem; /* Increase padding */
       }
     }
 
@@ -320,9 +349,32 @@ class HeaderNav extends LitElement {
     }
 
     if (changedProperties.has('isLightBackground')) {
+      // Check if background color is #f5f5f5
+      const bgColor = window.getComputedStyle(this).backgroundColor;
+      const rgb = bgColor.match(/\d+/g);
+      if (rgb) {
+        const hexColor = this.rgbToHex(parseInt(rgb[0]), parseInt(rgb[1]), parseInt(rgb[2]));
+        if (hexColor === '#f5f5f5') {
+          this.style.setProperty('--header-text-color', '#000000');
+        } else {
+          this.style.setProperty(
+            '--header-text-color',
+            this.isLightBackground ? '#000' : '#fff'
+          );
+        }
+      } else {
+        this.style.setProperty(
+          '--header-text-color',
+          this.isLightBackground ? '#000' : '#fff'
+        );
+      }
       this.style.setProperty(
-        '--header-text-color',
-        this.isLightBackground ? '#000' : '#fff'
+        '--dropdown-bg-color',
+        this.isLightBackground ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.9)'
+      );
+      this.style.setProperty(
+        '--nav-bg-color',
+        this.isLightBackground ? 'rgba(255, 255, 255, 0.95)' : 'rgba(0, 0, 0, 0.95)'
       );
     }
   }
