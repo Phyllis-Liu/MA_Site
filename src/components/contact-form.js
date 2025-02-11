@@ -145,42 +145,44 @@ class ContactForm extends LitElement {
     return html`
       <div class="form-container">
         <div class="title-section">
-          <h2>We'd love to hear your thoughts!</h2>
+          <h2>We'd love to hear</h2>
+          <h2>your thoughts!</h2>
         </div>
+        
         <div class="form-section">
           <div class="form-row">
             <div class="form-field">
-              <label for="first-name">First name</label>
-              <input type="text" id="first-name" name="first-name" placeholder="Value" />
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" placeholder="First Name" />
             </div>
             <div class="form-field">
-              <label for="last-name">Last name</label>
-              <input type="text" id="last-name" name="last-name" placeholder="Value" />
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" placeholder="Last name" />
             </div>
           </div>
           <div class="form-field">
-            <label for="company-name">Company name</label>
-            <input type="text" id="company-name" name="company-name" placeholder="Value" />
+            <label for="company-name">Company Name</label>
+            <input type="text" id="company-name" name="company-name" placeholder="Company name" />
           </div>
           <div class="form-field">
             <label for="address">Address</label>
-            <input type="text" id="address" name="address" placeholder="Value" />
+            <input type="text" id="address" name="address" placeholder="Address" />
           </div>
           <div class="form-field">
             <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="Value" />
+            <input type="tel" id="phone" name="phone" placeholder="Phone number" />
           </div>
           <div class="form-field">
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Value" />
+            <input type="email" id="email" name="email" placeholder="E-mail address" />
           </div>
           <div class="form-field">
             <label for="country">Country</label>
-            <input type="text" id="country" name="country" placeholder="Value" />
+            <input type="text" id="country" name="country" placeholder="Country name" />
           </div>
           <div class="form-field">
             <label for="message">MESSAGE</label>
-            <textarea id="message" name="message" placeholder="Value"></textarea>
+            <textarea id="message" name="message" placeholder="Please share your thoughts here."></textarea>
           </div>
         </div>
       </div>
