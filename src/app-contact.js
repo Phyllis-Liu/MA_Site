@@ -3,6 +3,7 @@ import './components/header-nav.js';
 import './components/contact-banner.js';
 import './components/contact-form.js';
 import './components/footer-section.js';
+import './components/head-office.js';
 
 class ContactPage extends LitElement {
   static styles = css`
@@ -50,6 +51,7 @@ class ContactPage extends LitElement {
     return html`
       <header-nav></header-nav>
       <contact-banner></contact-banner>
+      <head-office></head-office>
       <contact-form></contact-form>
       <footer-section></footer-section>
     `;
