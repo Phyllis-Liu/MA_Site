@@ -4,7 +4,7 @@ class ContactForm extends LitElement {
   static styles = css`
     :host {
       display: block;
-      margin-top: 60px;
+      margin-top: 0px;
     }
     
     .form-container {
@@ -82,6 +82,21 @@ class ContactForm extends LitElement {
       color: #999;
       font-size: 0.9em;
       font-family: inherit;
+    }
+
+    .send-button {
+      background-color: #B32F23;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+
+    .send-button:hover {
+      background-color: #B32F23;
     }
 
     /* RWD 樣式 */
@@ -183,6 +198,9 @@ class ContactForm extends LitElement {
           <div class="form-field">
             <label for="message">MESSAGE</label>
             <textarea id="message" name="message" placeholder="Please share your thoughts here."></textarea>
+          </div>
+          <div class="form-field full-width">
+            <button type="submit" class="send-button">Send</button>
           </div>
         </div>
       </div>
