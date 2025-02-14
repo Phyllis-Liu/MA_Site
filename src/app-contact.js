@@ -51,8 +51,8 @@ class ContactPage extends LitElement {
     return html`
       <header-nav></header-nav>
       <contact-banner></contact-banner>
-      <head-office></head-office>
       <contact-form></contact-form>
+      <head-office></head-office>
       <footer-section></footer-section>
     `;
   }
