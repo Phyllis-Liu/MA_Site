@@ -6,7 +6,7 @@ export class HeadOffice extends LitElement {
       display: block;
       padding: 20px;
       max-width: 1200px;
-      margin-top: 20px;
+      margin: 20px auto 0;
     }
 
     .head-office-container {
